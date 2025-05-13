@@ -1,62 +1,94 @@
-/* Definição das cores principais */
-:root {
-    --mocha-mousse: #6F4F37;
-    --future-dusk: #3F2A3C;
-    --ray-flower: #F9A825;
-    --transcendent-pink: #F1C6D9;
-    --off-white: #F8F8F0;
+/* Reset de margens e paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Corpo da página */
 body {
-    background-color: var(--off-white);
-    color: var(--mocha-mousse);
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #F8F8F0;
+  color: #4B6F44;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
 }
 
-/* Cabeçalho */
-header {
-    background-color: var(--future-dusk);
-    color: var(--off-white);
-    padding: 20px;
-    text-align: center;
+/* Tela de boas-vindas */
+.welcome-screen {
+  text-align: center;
+  padding: 20px;
+  background-color: #003366;
+  color: #F8F8F0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Títulos */
-h1, h2, h3 {
-    color: var(--future-dusk);
+.welcome-screen h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
-/* Links */
-a {
-    color: var(--ray-flower);
-    text-decoration: none;
+.welcome-screen .subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-/* Botões */
 button {
-    background-color: var(--ray-flower);
-    color: var(--off-white);
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
+  background-color: #D15B00;
+  color: #F8F8F0;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: var(--transcendent-pink);
+  background-color: #FFB300;
 }
 
-/* Rodapé */
-footer {
-    background-color: var(--mocha-mousse);
-    color: var(--off-white);
-    padding: 10px;
-    text-align: center;
+/* Lista de eventos */
+#events-container {
+  text-align: center;
+  margin-top: 20px;
+  display: none;
+}
+
+#event-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#event-list li {
+  background-color: #6F4F37;
+  color: #F8F8F0;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#event-list li img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.event-details {
+  display: none;
+  margin-top: 10px;
+  background-color: #F8F8F0;
+  color: #4B6F44;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

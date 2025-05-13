@@ -1,130 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem-vindo ao Agrinho 2025</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .welcome-screen {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-        }
-        .welcome-screen h1 {
-            font-size: 3em;
-        }
-        .container {
-            padding: 20px;
-        }
-        .event {
-            background-color: white;
-            margin-bottom: 20px;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .event img {
-            width: 100%;
-            border-radius: 8px;
-        }
-        .event h2 {
-            font-size: 1.5em;
-            margin-top: 10px;
-        }
-        .event p {
-            font-size: 1em;
-            color: #555;
-        }
-        .event .date, .event .location {
-            font-weight: bold;
-            color: #333;
-        }
-        .btn-proceed {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.2em;
-            margin-top: 20px;
-        }
-        .btn-proceed:hover {
-            background-color: #45a049;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agrinho 2025 - Protagonismo Verde</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="welcome-screen">
+    <h1>Bem-vindo ao Agrinho 2025</h1>
+    <p class="subtitle">Tema: Protagonismo Verde: Construindo um Futuro Sustentável</p>
+    <button id="proseguir">Proseguir</button>
+  </div>
 
-    <div class="welcome-screen">
-        <div>
-            <h1>Bem-vindo ao Agrinho 2025</h1>
-            <p>Tema: Tecnologia que Transforma o Campo</p>
-            <button class="btn-proceed" onclick="showEvents()">Prosseguir</button>
-        </div>
-    </div>
+  <div id="events-container" class="hidden">
+    <h2>Eventos Culturais Relacionados</h2>
+    <ul id="event-list">
+      <!-- Eventos serão inseridos aqui pelo JavaScript -->
+    </ul>
+  </div>
 
-    <div class="container" id="events-container" style="display: none;">
-        <div class="event">
-            <img src="https://via.placeholder.com/800x400.png?text=Show+Rural+Coopavel" alt="Show Rural Coopavel">
-            <h2>Show Rural Coopavel</h2>
-            <p class="date">10 a 14 de fevereiro de 2025</p>
-            <p class="location">Cascavel, Paraná</p>
-            <p>Um dos maiores eventos do agronegócio no Brasil, com foco em tecnologias e inovações do campo.</p>
-        </div>
-        <div class="event">
-            <img src="https://via.placeholder.com/800x400.png?text=Expodireto+Cotrijal" alt="Expodireto Cotrijal">
-            <h2>Expodireto Cotrijal</h2>
-            <p class="date">10 a 14 de março de 2025</p>
-            <p class="location">Não-Me-Toque, Rio Grande do Sul</p>
-            <p>Reconhecida por sua abrangência, é um dos maiores eventos de negócios do agro, com foco em tecnologias, inovação e sustentabilidade no setor agrícola.</p>
-        </div>
-        <div class="event">
-            <img src="https://via.placeholder.com/800x400.png?text=Farm+Show+MT" alt="Farm Show MT">
-            <h2>Farm Show MT</h2>
-            <p class="date">18 a 21 de março de 2025</p>
-            <p class="location">Primavera do Leste, Mato Grosso</p>
-            <p>A feira apresenta as principais inovações em máquinas, implementos e tecnologias para o agronegócio, com grande participação de produtores rurais e empresas do setor no estado de Mato Grosso.</p>
-        </div>
-        <div class="event">
-            <img src="https://via.placeholder.com/800x400.png?text=Agrishow" alt="Agrishow">
-            <h2>Agrishow</h2>
-            <p class="date">28 de abril a 02 de maio de 2025</p>
-            <p class="location">Ribeirão Preto, São Paulo</p>
-            <p>A maior feira de tecnologia para o agronegócio da América Latina, com exposição de inovações em máquinas, equipamentos e serviços.</p>
-        </div>
-        <div class="event">
-            <img src="https://via.placeholder.com/800x400.png?text=AveSui" alt="AveSui">
-            <h2>AveSui</h2>
-            <p class="date">27 a 29 de maio de 2025</p>
-            <p class="location">Medianeira, Paraná</p>
-            <p>Focada na produção de aves e suínos, a AveSui é um evento relevante para quem atua na avicultura e suinocultura, com destaque para inovações e soluções tecnológicas.</p>
-        </div>
-        <div class="event">
-            <img src="https://via.placeholder.com/800x400.png?text=AgroBras%C3%ADlia" alt="AgroBrasília">
-            <h2>AgroBrasília</h2>
-            <p class="date">20 a 24 de maio de 2025</p>
-            <p class="location">Brasília, Distrito Federal</p>
-            <p>A maior feira do Centro-Oeste, destacando soluções tecnológicas para a agricultura e o agronegócio, promovendo negócios e networking.</p>
-        </div>
-        <div class="event">
-            <img src="https://via.placeholder.com/800x400.png?text=Expocaf%C3%A9" alt="Expocafé">
-            <h2>Expocafé</h2>
-            <p class="date">27 a 29 de maio de 2025</p>
-            <p class="location">Três Pontas, Minas Gerais</p>
-            <p>Focada no setor cafeeiro, a Expocafé é um evento que traz as últimas tendências e inovações para a cadeia produtiva do café.</p>
-        </div>
-        <div class="event">
-            <img src="https://via.placeholder.com/800
-::contentReference[oaicite:0]{index=0}
- 
+  <script src="script.js"></script>
+</body>
+</html>
