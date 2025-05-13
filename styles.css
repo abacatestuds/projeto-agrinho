@@ -1,129 +1,138 @@
-/* Estilos gerais da página */
-/* Configurações de base para toda a página */
+/* Resetando margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
 body {
-    font-family: 'Arial', sans-serif; /* Define a fonte padrão */
-    line-height: 1.6; /* Ajusta o espaçamento entre linhas */
-    background-color: #f3f4f6; /* Define uma cor de fundo suave */
-    margin: 0; /* Remove margens padrão */
-    padding: 0; /* Remove preenchimentos padrão */
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    overflow: hidden;
 }
 
-/* Estilo do cabeçalho (header) */
-header {
-    background-color: #38a169; /* Fundo verde para o cabeçalho */
-    color: white; /* Texto branco */
-    padding: 1rem 0; /* Espaçamento interno vertical */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
+/* Seção inicial */
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #a8e063, #56ab2f);
+    position: relative;
+    text-align: center;
+    overflow: hidden;
 }
 
-/* Layout flexível do container dentro do cabeçalho */
-header .container {
-    display: flex; /* Alinha itens horizontalmente */
-    justify-content: space-between; /* Espaça os itens nas extremidades */
-    align-items: center; /* Alinha verticalmente os itens */
+/* Conteúdo centralizado */
+.content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
-/* Estilo do título do cabeçalho */
-header h1 {
-    margin: 0; /* Remove margens para evitar deslocamentos */
+/* Efeito de rolagem suave */
+html {
+    scroll-behavior: smooth;
 }
 
-/* Navegação no cabeçalho */
-header nav ul {
-    list-style: none; /* Remove os marcadores de lista */
-    margin: 0; /* Remove margens padrão */
-    padding: 0; /* Remove preenchimentos padrão */
-    display: flex; /* Alinha os itens horizontalmente */
+/* Botão de prosseguir */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #56ab2f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
-/* Itens da navegação */
-header nav ul li {
-    margin-right: 1rem; /* Adiciona espaçamento entre os links */
+button:hover {
+    background-color: #a8e063;
 }
 
-/* Links na navegação */
-header nav ul li a {
-    text-decoration: none; /* Remove sublinhado */
-    color: white; /* Define a cor branca para os links */
-    font-weight: bold; /* Torna o texto mais espesso */
+/* Seção de eventos */
+#eventos {
+    padding: 20px;
+    background-color: #ffffff;
+    margin-top: 20px;
 }
 
-/* Efeito ao passar o mouse sobre os links */
-header nav ul li a:hover {
-    text-decoration: underline; /* Adiciona sublinhado */
+/* Filtro de eventos */
+.filtro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
-/* Conteúdo principal */
-main {
-    max-width: 800px; /* Limita a largura do conteúdo */
-    margin: 2rem auto; /* Centraliza o conteúdo horizontalmente */
-    padding: 0 1rem; /* Adiciona espaçamento interno nas laterais */
+.filtro label {
+    font-weight: bold;
 }
 
-/* Seções dentro do conteúdo principal */
-section {
-    margin-bottom: 2rem; /* Espaçamento inferior entre as seções */
+.filtro select,
+.filtro input {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-/* Estilo dos títulos das seções */
-section h2 {
-    margin-bottom: 1rem; /* Espaçamento inferior do título */
-    font-size: 2rem; /* Aumenta o tamanho da fonte */
-    color: #38a169; /* Cor verde para os títulos */
+/* Lista de eventos */
+#listaEventos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-/* Estilo do formulário de login */
-form {
-    background-color: white; /* Fundo branco */
-    padding: 1.5rem; /* Espaçamento interno do formulário */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+.evento {
+    width: calc(33.333% - 20px);
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo dos rótulos (label) do formulário */
-form label {
-    display: block; /* Cada rótulo ocupa uma linha separada */
-    margin-bottom: 0.5rem; /* Espaçamento inferior do rótulo */
-    font-weight: bold; /* Torna o texto mais espesso */
-    color: #4a5568; /* Cor cinza escuro */
+.evento h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
-/* Estilo dos campos de entrada (input) */
-form input {
-    width: 100%; /* Campo ocupa toda a largura disponível */
-    padding: 0.5rem; /* Espaçamento interno do campo */
-    margin-bottom: 1rem; /* Espaçamento inferior entre os campos */
-    border: 1px solid #cbd5e0; /* Adiciona borda cinza clara */
-    border-radius: 4px; /* Bordas arredondadas */
+.evento p {
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 
-/* Botão do formulário */
-form button {
-    background-color: #38a169; /* Fundo verde */
-    color: white; /* Texto branco */
-    padding: 0.75rem 1.5rem; /* Espaçamento interno do botão */
-    border: none; /* Remove borda padrão */
-    border-radius: 4px; /* Bordas arredondadas */
-    cursor: pointer; /* Muda o cursor para indicar clique */
-    font-weight: bold; /* Torna o texto mais espesso */
+.evento .data {
+    font-weight: bold;
+    color: #56ab2f;
 }
 
-/* Efeito ao passar o mouse sobre o botão */
-form button:hover {
-    background-color: #2f855a; /* Fundo verde mais escuro */
-}
-
-/* Rodapé (footer) */
+/* Rodapé */
 footer {
-    background-color: #2d3748; /* Fundo cinza escuro */
-    color: white; /* Texto branco */
-    text-align: center; /* Centraliza o texto no rodapé */
-    padding: 1rem 0; /* Espaçamento interno vertical */
-    margin-top: 2rem; /* Espaçamento superior para separar do conteúdo */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
 }
 
-/* Classe para esconder elementos */
-/* Essa classe é usada para alternar visibilidade no JavaScript */
-.hidden {
-    display: none; /* Esconde completamente o elemento */
+footer a {
+    color: #56ab2f;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
