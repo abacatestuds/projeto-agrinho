@@ -48,7 +48,25 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     {
       title: 'Semana Nacional do Meio Ambiente',
-      date: 'Primeira semana de junho de 2025',
-      location: '
-::contentReference[oaicite:0]{index=0}
- 
+      date: '1 a 5 de junho de 2025',
+      location: 'Brasil',
+      description: 'Semana dedicada à conscientização ambiental, com atividades como palestras, plantios e ações educativas em todo o país.',
+      imageUrl: 'https://econsulting.com.br/wp-content/uploads/2023/05/semana-meio-ambiente.jpg'
+    }
+  ];
+
+  btnProseguir.addEventListener('click', function() {
+    eventsContainer.classList.remove('hidden');
+    events.forEach(event => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <img src="${event.imageUrl}" alt="${event.title}">
+        <h3>${event.title}</h3>
+        <p><strong>Data:</strong> ${event.date}</p>
+        <p><strong>Local:</strong> ${event.location}</p>
+        <p>${event.description}</p>
+      `;
+      eventList.appendChild(li);
+    });
+  });
+});
