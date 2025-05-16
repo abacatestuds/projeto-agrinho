@@ -1,31 +1,29 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!-- Arquivo HTML --><!DOCTYPE html><html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agrinho 2025 - Protagonismo Verde</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Agrinho Cultural</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <div class="welcome-screen">
-    <h1>Bem-vindo ao Agrinho 2025</h1>
-    <p class="subtitle">Tema: <section id="intro">
-  <h2>Bem-vindo ao Agrinho 2025</h2>
-  <p>
-    Seja parte desta jornada única que conecta tradição e inovação! O Agrinho 2025 celebra a harmonia entre a agricultura e a urbanização, promovendo eventos culturais que inspiram sustentabilidade, inclusão e desenvolvimento comunitário. Explore nossas atividades, conheça cidades participantes e descubra como o campo e a cidade se unem para transformar o futuro. Junte-se a nós e faça parte dessa transformação!
-  </p>
-</section>
-</p>
-    <button id="proseguir">Proseguir</button>
-  </div>
+<body><!-- Tela de boas-vindas -->
+<div class="welcome-screen" id="welcomeScreen">
+    <h1>Bem-vindo ao Portal Agrinho Cultural</h1>
+    <p>Explore eventos culturais que conectam campo e cidade no Sul do Brasil.</p>
+    <button onclick="proceed()">Prosseguir</button>
+</div>
 
-  <div id="events-container" class="hidden">
-    <h2>Eventos Culturais Relacionados</h2>
-    <ul id="event-list">
-      <!-- Eventos serão inseridos aqui pelo JavaScript -->
-    </ul>
-  </div>
+<!-- Página principal -->
+<div class="main-content" id="mainContent">
+    <div class="search-bar">
+        <input type="text" id="searchBar" placeholder="Busque eventos por estado (PR, SC, RS)..." oninput="filterEvents()">
+    </div>
+    <div class="events-container" id="eventsContainer">
+        <!-- Eventos carregados dinamicamente -->
+    </div>
+</div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
